@@ -1,4 +1,3 @@
-
 const request = require('request');
 const yargs = require('yargs');
 
@@ -19,7 +18,7 @@ const argv = yargs
     var encodedAddress = encodeURIComponent(argv.a);
 
 request({
-    url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`,
+    url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=<PUT YOUR API KEY HERE>`,
     json: true
 }, (error, response, body) => {
     if(error){
